@@ -1,1 +1,13 @@
-# the-first-one-
+flowchart TD
+  A[Raw FASTQ] --> B[bwa aln/samse -> mapped.bam]
+  B --> C[Realign (RealignSAMFile)]
+  C --> D[Dedup -> rmdup.bam]
+  D --> E[Filter MAPQ>=30 -> q30.bam]
+  E --> F[samtools fillmd -> MD.bam]
+  F --> G[Downsample to <=30k -> small.bam]
+  G --> H[contDeam.pl (Schmutzi step1)]
+  H --> I[schmutzi.pl (Schmutzi step2)]
+  I --> J[Outputs: cont.est, endo.fa, cont.fa, logs]
+  J --> K[log2fasta -> endo_filtered.fasta & cont_filtered.fasta]
+  K --> L[haplogrep -> haplogroups]
+  J --> M[summary: coverage, nr_reads, contamination]
