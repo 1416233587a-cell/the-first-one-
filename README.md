@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
   %% 样式定义
   classDef start fill:#90caf9,stroke:#1e88e5,color:#0d47a1,stroke-width:2px;
@@ -24,6 +25,7 @@ flowchart TD
   L[haplogrep<br/>→ 母系单倍群]:::step2
   M[总结：覆盖度 · reads 数量 · 污染率]:::output
 
-  %% 连线
+  %% 连线（纵向）
   A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
   J --> M
+```
