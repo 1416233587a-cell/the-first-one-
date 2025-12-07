@@ -1,5 +1,4 @@
-```mermaid
-flowchart LR
+flowchart TD
   %% 样式定义
   classDef start fill:#90caf9,stroke:#1e88e5,color:#0d47a1,stroke-width:2px;
   classDef step1 fill:#a5d6a7,stroke:#43a047,color:#1b5e20,stroke-width:1.5px;
@@ -28,4 +27,3 @@ flowchart LR
   %% 连线
   A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
   J --> M
-```
